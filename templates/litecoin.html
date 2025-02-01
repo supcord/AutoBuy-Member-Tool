@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Litecoin Address</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            background-color: #1b1f23;
+        }
+
+        h1 {
+            color: #00e1ff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .copy-button {
+            background-color: #00e1ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .copy-button:hover {
+            background-color: #00e1ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Litecoin Address</h1>
+        <p>{{ litecoin_addy }}</p>
+        <button class="copy-button" onclick="copyText('{{ litecoin_addy }}')">Copy Address</button>
+    </div>
+
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    alert('Address copied to clipboard!');
+                })
+                .catch((error) => {
+                    alert('Failed to copy address: ' + error);
+                });
+        }
+    </script>
+</body>
+</html>
