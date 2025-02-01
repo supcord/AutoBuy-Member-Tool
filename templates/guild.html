@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guild Status</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            background-color: #1b1f23;
+        }
+
+        h1 {
+            color: #00e1ff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .guild-info {
+            margin-bottom: 20px;
+        }
+
+        .guild-info p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Guild Status - {{ guild['guild'] }}</h1>
+
+        {% if guild is none %}
+            <p>No guild information available.</p>
+        {% else %}
+            <div class="guild-info">
+                <p>Added: <code>{{ guild['added'] }}</code></p>
+                <p>Remaining: <code>{{ guild['remaining'] }}</code></p>
+                <p>Estimated Time: <code>{{ guild['estimated_time'] }}</code></p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
