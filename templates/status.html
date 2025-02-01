@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Running Tasks</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            background-color: #1b1f23;
+        }
+
+        h1 {
+            color: #00e1ff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .task {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ffffff;
+            padding-bottom: 10px;
+        }
+
+        .task p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Running Tasks</h1>
+
+        {% if running_tasks %}
+            {% for task in running_tasks %}
+                <div class="task">
+                    <p>Guild: <code>{{ task['guild'] }}</code></p>
+                    <p>Added: <code>{{ task['added'] }}</code></p>
+                    <p>Remaining: <code>{{ task['remaining'] }}</code></p>
+                    <p>Estimated Time: <code>{{ task['estimated_time'] }}</code></p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No running tasks.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
