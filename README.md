@@ -13,10 +13,3 @@ Ltc Addy - Lh93kRZepvXhfAHKwrzHUi5GAsvJZAijfp
 ## Credits
 **Author:**  
 Supcord - **[GitHub](https://github.com/supcord)**
-
-**Team:**
-<div align="center">
-  <a href="https://discord.gg/PhYUv7jAQr">
-    <img src="https://discordapp.com/api/guilds/699587669059174461/widget.png?style=banner2">
-  </a>
-</div>
