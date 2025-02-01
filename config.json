@@ -1,0 +1,33 @@
+{
+    "Main":{
+        "token":"MAIN BOT TOKEN",
+        "prefix":"$",
+        "allowed_ids":["YOUR ID"]
+    },
+    "Delivery":
+    {
+        "online":{
+            "client_id":"YOUR ONLINE MEMBERS BOT ID",
+            "token":"YOUR ONLINE MEMBERS BOT TOKEN"
+        },
+        "offline":{
+            "client_id":"YOUR OFFLINE MEMBERS BOT ID",
+            "token":"YOUR OFFLINE MEMBERS BOT ID"
+        }
+    },
+    "Redirect":"",
+    "Owner":{
+        "Name":"",
+        "Discord":"",
+        "Litecoin":""
+    },
+    "Webhooks":{
+        "Transcations":"",
+        "Logs":"",
+        "Errors":"",
+        "Orders":""
+    },
+    "Discord":{
+        "url":""
+}
+}
