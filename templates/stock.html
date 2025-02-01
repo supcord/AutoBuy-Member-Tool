@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Information</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            background-color: #1b1f23;
+        }
+
+        h1 {
+            color: #00e1ff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .token {
+            margin-bottom: 20px;
+        }
+
+        .token p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Token Overview</h1>
+
+        <div class="token">
+            <p>Offline Members: {{ offline_tokens }}</p>
+        </div>
+
+        <div class="token">
+            <p>Online Members: {{ online_tokens }}</p>
+        </div>
+    </div>
+</body>
+</html>
