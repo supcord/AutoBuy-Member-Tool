@@ -1,6 +1,6 @@
-Kindly join discord.gg/PhYUv7jAQr for setup help
+# Kindly Join Supcord Discord Server If Getting Any Problem In Code
 
-Redirects:
+## Redirects:
 
 - 1. For the config.json this  http://your_rdp_ip:1337
 - 2. For the main bot this  http://your_rdp_ip:1337/main
