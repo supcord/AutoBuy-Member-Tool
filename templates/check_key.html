@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Key</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            background-color: #1b1f23;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .discord-server-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #00e1ff;
+        }
+
+        .detail-label {
+            color: #00e1ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Check Key</h1>
+        {% if result is none %}
+            <p>{{ data }}</p>
+        {% elif result %}
+            <p>Key is valid but unused:</p>
+            <ul>
+                <li><span class="detail-label">Uses:</span> {{ data['uses'] }}</li>
+                <li><span class="detail-label">Amount:</span> {{ data['amount'] }}</li>
+                <li><span class="detail-label">Type:</span> {{ data['type'] }}</li>
+                <li><span class="detail-label">Start:</span> {{ data['start'] }}</li>
+                <li><span class="detail-label">Created:</span> {{ data['created'] }}</li>
+                <li><span class="detail-label">Used:</span> {{ data['used'] }}</li>
+            </ul>
+        {% else %}
+            <p>Key has been used:</p>
+            <ul>
+                <li><span class="detail-label">Uses:</span> {{ data['uses'] }}</li>
+                <li><span class="detail-label">Amount:</span> {{ data['amount'] }}</li>
+                <li><span class="detail-label">Type:</span> {{ data['type'] }}</li>
+                <li><span class="detail-label">Start:</span> {{ data['start'] }}</li>
+                <li><span class="detail-label">Created:</span> {{ data['created'] }}</li>
+                <li><span class="detail-label">Used:</span> {{ data['used'] }}</li>
+                <li><span class="detail-label">Used Time:</span> {{ data['used_time'] }}</li>
+                <li><span class="detail-label">Used User Agent:</span> {{ data['used_user_agent'] }}</li>
+                <li><span class="detail-label">Used Guild ID:</span> {{ data['used_guild_id'] }}</li>
+            </ul>
+        {% endif %}
+        <p class="discord-server-link">Visit the homepage for more information.</p>
+    </div>
+</body>
+</html>
