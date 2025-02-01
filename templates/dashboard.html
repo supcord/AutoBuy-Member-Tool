@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discord Bot Dashboard</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            background-color: #1b1f23;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        .discord-server-link {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* New styles for credits and warning */
+        .credits {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .warning {
+            font-size: 14px;
+            color: #ff0000;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Members Bot Dashboard</h1>
+        <p>Welcome To The Members Dashboard! Here are some details:</p>
+        <ul>
+            <li><span style="color: #00e1ff;">Owner ID:</span> {{ owner_id }} </li>
+            <li><span style="color: #00e1ff;">Discord Server URL:</span> <a href="{{ discord_server_url }}">{{ discord_server_url }}</a></li>
+            <li><span style="color: #00e1ff;">Visit Time:</span> {{ current_time }}</li>
+        </ul>
+        <p class="discord-server-link">Join our Discord server to get support and updates!</p>
+    </div>
+</body>
+</html>
